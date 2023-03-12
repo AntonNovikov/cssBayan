@@ -118,6 +118,35 @@ body {
   padding: 0.5rem;
 }
 .bayan:hover .meme-text {
-    color: #311deb;
-    animation-delay: 1000s;
+  color: #311deb;
+  animation-delay: 1000s;
+}
+@media (max-width: 1000px) {
+  .bayan__section:has(.bayan__input:checked) .mem-img {
+    padding-bottom: 0.5rem;
   }
+}
+@media (max-width: 700px) {
+  .meme-text {
+    font-size: 1.1rem;
+  }
+
+  .bayan__header {
+    max-height: 3vh;
+  }
+  .mem-img {
+    max-width: 30vh;
+    max-height: 30vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .mem-img {
+    max-width: 20vh;
+    max-height: 20vh;
+  }
+  .meme-text {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
