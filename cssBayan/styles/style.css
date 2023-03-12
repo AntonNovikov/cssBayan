@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dfdcda;
+}
+
+.header__wrapper {
+  font-size: 1.9rem;
+  background-color: #dfdcda;
+  margin: 0 auto;
+  margin-top: 5vh;
+  max-width: 65%;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.bayan {
+  background-color: #dfdcda;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  max-width: 65%;
+}
+
+.mem-img {
+  display: block;
+  max-width: 50vh;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 0;
+  scale: 0;
+  opacity: 0;
+  transition: opacity, scale, max-height, 0.25s;
+}
+
+.meme-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(52, 89, 105);
+  transition: all 0.5s;
+  font-style: bold;
+}
+
+.bayan__label,
+.header_text {
+  padding: 0.5rem;
+}
+
+.bayan__label,
+.bayan,
+.mem-img {
+  cursor: pointer;
+}
+
+.bayan__label {
+  display: block;
+  color: #dfdcda;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.bayan__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  height: 3vh;
+  width: 3vh;
+  opacity: 0;
+  transition: opacity, rotate, 0.4s;
+}
+
+.bayan__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfdcda;
+}
+
+.bayan__input {
+  display: none;
+}
+
+.bayan__section:has(.bayan__input:checked) .meme-text {
+  color: blue;
+}
+
+.bayan__section:has(.bayan__input:checked) .mem-img {
+  height: auto;
+  padding-bottom: 1.5rem;
+  opacity: 1;
+  scale: 1;
+}
+
+.bayan__section:has(.bayan__input:checked) .icon {
+  rotate: 45deg;
+}
+.bayan__section:has(.bayan__input:checked) .bayan__img {
+  padding: 0.5rem;
+}
+
+.bayan:hover .icon {
+  opacity: 1;
+}
+.bayan__section:has(.bayan__input:hover) .mem-img {
+  height: auto;
+  padding-bottom: 1.5rem;
+  opacity: 1;
+  scale: 1;
+}
+.bayan__section:has(.bayan__input:hover) .icon {
+  rotate: 45deg;
+}
+.bayan__section:has(.bayan__input:hover) .bayan__img {
+  padding: 0.5rem;
+}
+.bayan:hover .meme-text {
+  color: #311deb;
+  animation-delay: 1000s;
+}
+@media (max-width: 1000px) {
+  .bayan__section:has(.bayan__input:checked) .mem-img {
+    padding-bottom: 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .meme-text {
+    font-size: 1.1rem;
+  }
+
+  .bayan__header {
+    max-height: 3vh;
+  }
+  .mem-img {
+    max-width: 30vh;
+    max-height: 30vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .mem-img {
+    max-width: 20vh;
+    max-height: 20vh;
+  }
+  .meme-text {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
